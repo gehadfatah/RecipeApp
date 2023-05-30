@@ -10,9 +10,10 @@
 
     <FrameLayout
         android:id="@+id/card_view_item_category"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_53sdp"
+        android:layout_width="79dp"
+        android:layout_height="53dp"
         android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">

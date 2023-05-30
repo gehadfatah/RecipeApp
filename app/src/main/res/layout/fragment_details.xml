@@ -87,6 +87,7 @@
                 android:fontFamily="@font/gilroy_bold"
                 android:textColor="@color/black"
                 android:textSize="24sp"
+                style="@style/bold"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Beef &amp; Mustard Pie" />
@@ -219,9 +220,10 @@
                 android:layout_marginTop="32dp"
 
                 android:fontFamily="@font/gilroy_bold"
+                android:textStyle="bold"
                 android:text="@string/recipe"
-                android:textColor="#1E1E1E"
                 android:textSize="16sp"
+                android:textColor="#1E1E1E"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/viewline" />
 

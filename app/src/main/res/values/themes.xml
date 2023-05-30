@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.RecipesApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.RecipesApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/white1</item>
@@ -20,5 +20,10 @@
     <style name="fab_square" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">10dp</item>
+    </style>
+    <style name="bold" parent="Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/gilroy_bold</item>
+        <item name="android:textColor">@color/black1</item>
     </style>
 </resources>

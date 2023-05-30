@@ -54,7 +54,7 @@ class FoodAdapter : RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
             adapter = tagsAdapter
             layoutManager = GridLayoutManager(context, 2)
         }
-        tagsAdapter.differ.submitList(tags)
+        tagsAdapter.differ.submitList(tags.filter{tag->tag.isNotEmpty()})
     }
     override fun getItemCount(): Int {
         return differ.currentList.size

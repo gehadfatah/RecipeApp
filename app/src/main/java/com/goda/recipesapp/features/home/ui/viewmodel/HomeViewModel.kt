@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goda.recipesapp.R
 import com.goda.recipesapp.features.home.data.models.CategoriesList
 import com.goda.recipesapp.data.Model.Meal
 import com.goda.recipesapp.data.Model.RandomMeals
@@ -32,7 +33,7 @@ class HomeViewModel  @Inject constructor(
 
     init {
         getCategory()
-        getFilter("Beef")
+        getFilter(context.getString(R.string.default_meal))
 
     }
 

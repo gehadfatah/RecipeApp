@@ -133,7 +133,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
             adapter = tagsAdapter
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }
-        tagsAdapter.differ.submitList(tags)
+        tagsAdapter.differ.submitList(tags.filter{tag->tag.isNotEmpty()})
     }
 
     private fun initListener(fragmentDetailsBinding: FragmentDetailsBinding, food: Meal) {
