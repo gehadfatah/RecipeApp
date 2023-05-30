@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.home.ui.fragments.HomeFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/sw_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="0dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_view_fragment_home_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:paddingStart="24dp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:text="@string/categories"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlSymmetry" />
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_fragment_home_title"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_category" />
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_recommendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    app:duration="800"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_fragment_home_title">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <include layout="@layout/shimmer_recommendation" />
+
+
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+                <TextView
+                    android:id="@+id/titleRE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:text="@string/popular_recipes"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_food"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:clipToPadding="false"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleRE"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_food" />
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    app:duration="800"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleRE">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/shimmer_categories" />
+
+                        <include layout="@layout/shimmer_categories" />
+
+                        <include layout="@layout/shimmer_categories" />
+
+                        <include layout="@layout/shimmer_categories" />
+
+
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

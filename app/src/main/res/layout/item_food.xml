@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/rounded_border"
+    android:layout_height="wrap_content">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image_view_item_food"
+        android:layout_width="178dp"
+        android:layout_height="136dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius_bottom_left="0dp"
+        app:riv_corner_radius_bottom_right="0dp"
+        app:riv_corner_radius_top_left="8dp"
+        app:riv_corner_radius_top_right="8dp"
+        tools:ignore="VectorDrawableCompat"
+        tools:src="@tools:sample/avatars" />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/horizontalScroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="14dp"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_item_food"
+        android:layout_height="wrap_content" >
+
+
+    <TextView
+        android:id="@+id/name_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="@font/gilroy_bold"
+        android:singleLine="true"
+        tools:text="Corned Beef &amp; Cabbage"
+        android:textColor="@color/black1"
+        android:textSize="13sp"
+       />
+    </HorizontalScrollView>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/name_categoryLin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScroll">
+
+        <TextView
+            android:id="@+id/name_categorytv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_regular"
+            android:gravity="center"
+            android:text="Category:"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/name_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_item_food"
+            tools:text="Beef" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/originLin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_categoryLin">
+
+        <TextView
+            android:id="@+id/name_origintv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_regular"
+            android:gravity="center"
+            android:text="Origin:"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/name_origin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            tools:text="Irish" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/originLin">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tagsRecycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_tag" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="16dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
